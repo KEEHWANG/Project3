@@ -1,0 +1,26 @@
+<html>
+
+<body bgcolor=#a3cfb4>
+
+    <center>
+
+        <h1>  진단결과 :  </h1>
+    
+    {%if data == 0%}
+    <h1>안심하세요, 당뇨병이 아닙니다.</h1>
+    <img src= "{{ url_for('static', filename='relief.jpg')}}", width="500" ,height="600">  
+
+    {%else%}
+    <h1>당신은 약 76%의 확률로 당뇨병입니다. 지금당장 의사와 상담하고 생활습관을 교정하세요.</h1>
+    <img src= "{{ url_for('static', filename='warning-sign.png')}}", width="500" ,height="600">
+    
+    {%endif%}
+
+        <br><br>
+    <a href='/'>다시 검사하러 가기</a>
+
+    </center>
+
+</body>
+
+</html>

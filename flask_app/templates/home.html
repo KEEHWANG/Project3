@@ -1,0 +1,78 @@
+<html>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">AI Doctor</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Diagnosis</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+    <body bgcolor=#d4a3ae>
+
+        <center>
+
+        <h1> 진단표를 작성하세요. AI의사가 당신의 당뇨병 위험을 진단해 드립니다. </h1><br>
+
+    </center>
+
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <form method="POST", action="{{url_for('home')}}">
+                        
+                        <b><label for="validationCustom01" class="form-label">1.임신횟수</label>
+                        <input type="text" class="form-control" name='a' placeholder="예) 0, 1..."><br>
+                        <label for="validationCustom01" class="form-label">2.포도당수치</label>
+                        <input type="text" class="form-control" name='b' placeholder="예) 183"><br>
+                        <label for="validationCustom01" class="form-label">3.최저혈압(mm Hg)</label>
+                        <input type="text" class="form-control" name='c' placeholder="예) 64"><br>
+                        <label for="validationCustom01" class="form-label">4.피부두께(mm)</label>
+                        <input type="text" class="form-control" name='d' placeholder="예) 35"><br>
+                        <label for="validationCustom01" class="form-label">5.인슐린수치(mu U/ml)</label>
+                        <input type="text" class="form-control" name='e' placeholder="예) 88"><br>
+                        <label for="validationCustom01" class="form-label">6.BMI지수</label>
+                        <input type="text" class="form-control" name='f' placeholder="예) 23.3"><br>
+                        <label for="validationCustom01" class="form-label">7.당뇨병혈통기능</label>
+                        <input type="text" class="form-control" name='g' placeholder="예) 0.67"><br>
+                        <label for="validationCustom01" class="form-label">8.연령</label>
+                        <input type="text" class="form-control" name='h' placeholder="예) 32"><br><br></b>
+                         <input class="btn btn-primary" type="submit" value="지금 바로 진단하기!">
+                     </form>
+                  </div>
+                  <div class="col">
+                    <p class="lh-1">
+                        <br><img src='static\diabetes.jpg' alt="diabetes"><br><br>
+
+                        *진단표 항목 설명<br><br><br>
+                        1. 임신횟수 : 과거 임신횟수를 숫자만 적어주세요. (임신한 적이 없으면 0을 입력). <br><br>
+                        2. 포도당수치 : 경구당부하 검사 후 2시간이 경과했을 시점의 포도당수치를 입력 하세요. <br><br>
+                        3. 최저혈압 : 혈압검사 결과 최저혈압을 적어주세요. (mm Hg) <br><br>
+                        4. 피부두깨 : 피부주름두깨 검사 결과를 적어주세요. (mm) <br><br>
+                        5. 인슐린수치 : 2시간 혈당 수치를 적어주세요. (mu U/ml) <br><br>
+                        6. BMI지수 : 본인의 BMI지수를 입력해 주세요. (몸무게 kg/(키 in m)^2) <br><br>
+                        7. 당뇨병혈통기통 : 당뇨병 혈통 기통 지수를 적어주세요. <br><br>
+                        8. 연령 : 나이를 숫자만 입력해 주세요. <br><br>
+                    </p>
+                    
+                  </div>
+                </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+</html>
